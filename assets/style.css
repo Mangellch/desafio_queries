@@ -189,6 +189,7 @@ footer {
 
 .texto__footer {
     text-align: center;
+    font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--colorTitulo);
 }
@@ -372,6 +373,12 @@ footer p {
     .seccion__cards {
         display: grid;
         grid-template-columns: repeat(3, 1fr); /* Escritorio: 3 columnas */
+    }
+
+    .texto__footer {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--colorTitulo);
     }
 }
 
