@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonie Pet Shop</title>
+    <!--icono-->
+    <link rel="icon" href="assets/images/icono.png" type="image/x-icon">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img class="logo__navbar" src="assets/images/logo.png" alt="logo pagina">
+            <h1 class="titulo_principal">
+                Tu Tienda de Mascotas Online
+            </h1>
+            <!-- Menú de opciones -->
+            <div class="menu__items">
+                <a class="contenido__nav" href="#">Inicio</a>
+                <a class="contenido__nav" href="#">Sobre Nosotros</a>
+                <a class="contenido__nav" href="#">Contáctanos</a>
+            </div>
+            <!-- Menú hamburguesa -->
+            <div class="menu__toggle">
+                <i class="fa-solid fa-bars fa-2x"></i>
+            </div>
+        </nav>
+    </header>
+    
+    <h2 class="seccion__titulo">Nuestros Productos</h2>
+    
+    <main class="contenedor">
+        <div class="filtro__busqueda">
+            <form>
+                <label for="filtro">Ordenar Por</label><br>
+                <select id="filtro">
+                    <option value="precio">Precio</option>
+                    <option value="marca">Marca</option>
+                    <option value="nuevos">Recién Añadidos</option>
+                    <option value="oferta">Ofertas</option>
+                </select>
+            </form>
+        </div>
+        <aside>
+            <div class="contenido__aside">
+                <p class="titulo__aside">Catálogo</p>
+                <p class="texto__aside">Gatos</p>
+                <p class="texto__aside">Perros</p>
+                <p class="texto__aside">Exóticos</p>
+            </div>
+        </aside>
+        <section class="seccion__cards">
+            <!--Cards-->
+            <div class="card">
+                <img class="card__imagen" src="assets/images/Cama_mascotas.png" alt="cama mascotas">
+                <p class="descripcion__card">Cama para Gato o Perro, diseño vaca</p>
+                <p class="texto__card">Precio: <span>$5.000</span></p>
+                <div class="boton">
+                    <p>Seleccionar</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__imagen" src="assets/images/Cepillo_mascotas.png" alt="cepillo mascotas">
+                <p class="descripcion__card">Cepillo para mascotas</p>
+                <p class="texto__card">Precio: <span>$3.500</span></p>
+                <div class="boton">
+                    <p>Seleccionar</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__imagen" src="assets/images/Comedero.png" alt="comedero">
+                <p class="descripcion__card">Comedero con dispensador de agua</p>
+                <p class="texto__card">Precio: <span>$6.000</span></p>
+                <div class="boton">
+                    <p>Seleccionar</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__imagen" src="assets/images/Juguete_gato.png" alt="juguete gato">
+                <p class="descripcion__card">Juguete tipo resorte para gato</p>
+                <p class="texto__card">Precio: <span>$8.000</span></p>
+                <div class="boton">
+                    <p>Seleccionar</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__imagen" src="assets/images/Pelota_perro.png" alt="pelota perro">
+                <p class="descripcion__card">Pelota interactiva para perro </p>
+                <p class="texto__card">Precio: <span>$2.000</span></p>
+                <div class="boton">
+                    <p>Seleccionar</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__imagen" src="assets/images/Royal_Canin.png" alt="comida de perro">
+                <p class="descripcion__card">Comida Royal Canin puppy</p>
+                <p class="texto__card">Precio: <span>$20.000</span></p>
+                <div class="boton">
+                    <p>Seleccionar</p>
+                </div>
+            </div>
+        </section>
+        <!--Fin cards-->
+    </main>
+    
+    <!--Seccion de siguiente-->
+    <div class="seccion__siguiente">
+        <div>
+            <p class="texto__siguiente">
+                 <<
+            </p>
+        </div>
+        <div>
+            <p class="texto__siguiente">
+                 1
+            </p>
+        </div>
+        <div>
+            <p class="texto__siguiente">
+                2
+            </p>
+        </div>
+
+        <div>
+            <p class="texto__siguiente">
+                3 
+            </p>
+        </div>
+        <div>
+            <p class="texto__siguiente">
+                 >>
+            </p>
+        </div>
+    </div>
+    
+    <footer>
+        <p class="texto__footer">Wonie Pet Shop. © Todos los derechos reservados </p>
+        <p class="iconos_footer"><i class="fa-brands fa-whatsapp fa-lg icono"></i> <i class="fa-brands fa-instagram fa-lg icono"></i> </p>
+    </footer>
+</body>
+</html>

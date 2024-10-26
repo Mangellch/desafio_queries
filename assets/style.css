@@ -1,0 +1,392 @@
+:root {
+    --colorPrincipal: #F6EFBD;
+    --colorCard: #BC7C7C;
+    --colorNav: #E4C087;
+    --colorTitulo: #9F3557;
+    --azulPastel: #A2D2DF;
+    --fuentePrincipal: "DynaPuff", serif;
+    --fuenteSecundaria: "Indie Flower", cursive;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    background-color: var(--colorPrincipal);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: 600;
+}
+
+/* Estilos para dispositivos móviles */
+.menu__items {
+    display: none; /* Oculta el menú en pantallas pequeñas */
+}
+
+/* Main */
+.contenedor { 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "header header"
+        "filtro filtro"
+        "section section";
+}
+
+/* Encabezado */
+header {
+    display: grid; /*ACA ANTES ERA FLEX LO CAMBIE A GRID POR LO REQUISITOS*/
+    grid-area: header;
+    background-color: var(--colorNav);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: auto;
+}
+
+.menu__toggle {
+    display: flex; /* Muestra el ícono hamburguesa */
+    cursor: pointer;
+    color: var(--colorTitulo);
+    padding-left: 1rem;
+}
+
+.logo__navbar {
+    width: 5.5rem;
+    text-align: left;
+}
+
+.contenido__nav:hover {
+    border-radius: 80%;
+    font-weight: 600;
+    background-color: var(--colorCard);
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--colorTitulo);
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Ocupa el espacio restante en el centro */
+    margin: 0;
+}
+
+/*Filtro busqueda*/
+.filtro__busqueda{
+    grid-area: filtro;
+    text-align: center;
+    padding-bottom: 1rem;
+    font-family: var(--fuenteSecundaria);
+}
+
+#filtro{
+    width: 90%;
+    text-align: center;
+}
+
+/* Catalogo */
+.card {
+    width: 300px; 
+    background-color: var(--colorCard);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.seccion__cards {
+    gap: 30px;
+    grid-area: section;
+    padding-left: 2.5rem;
+}
+
+.seccion__titulo {
+    text-align: center;
+    font-size: 15px;
+}
+
+.card__imagen {
+    width: 70%;
+    border: 2px solid #000;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.descripcion__card {
+    font-size: 15px;
+    text-align: justify;
+    font-family: var(--fuenteSecundaria);
+    font-weight: 600;
+}
+
+.texto__card {
+    text-align: left;
+    border-top: 1px solid var(--colorPrincipal);
+    padding-top: 10px;
+}
+
+span{
+    color: var(--colorPrincipal);
+}
+
+.boton {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 7rem;
+    background-color: var(--azulPastel);
+    padding: 1px;
+    border-radius: 1rem;
+    margin: 0 auto;
+}
+
+
+/*cambio de pagina*/
+.seccion__siguiente {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    gap: 3rem;
+    
+}
+
+.texto__siguiente {
+    cursor: pointer;
+    padding: 4px;
+    border: 1px solid #000;
+}
+
+/* Pie de página */
+footer {
+    padding: 15px;
+    background-color: var(--colorNav);
+    box-shadow: 1px 1px 13px 4px rgba(143, 143, 143, 0.77);
+}
+
+.texto__footer {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--colorTitulo);
+}
+
+.iconos_footer {
+    text-align: center;
+}
+
+.icono {
+    color: var(--colorTitulo);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Versión tablet */
+@media (min-width: 576px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: 
+            "header header"
+            "filtro filtro"
+            "aside section";
+        margin-bottom: 1rem;
+    }
+
+    header {
+        grid-area: header;
+        background-color: var(--colorNav);
+        width: 100%; /* Ancho total de la pantalla */
+        padding: 1rem; /* Ajusta el padding para espaciar el contenido */
+    }
+
+     /* barra de navegación */
+     .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        height: auto;
+    }
+
+    .contenido__nav {
+        display: flex;
+        padding: 5px;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: var(--colorCard);
+        transition: background-color 0.3s, color 0.3s, border-radius 0.3s;
+    }
+
+    .seccion__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .card__imagen {
+        width: 80%; 
+    }
+
+    /*Menu*/
+    .menu__items{
+        display: flex;
+    }
+
+    /*Aside*/
+    aside{
+        box-shadow: 1px 1px 13px 4px rgba(143, 143, 143, 0.77);
+        padding: 0 1rem 0 1rem;
+        grid-area: aside;
+    }
+    
+    .titulo__aside{
+        color: var(--colorTitulo);
+    }
+    
+    .contenido__aside {
+        gap: 2px;
+        padding-top: 3px;
+    }
+    
+    .texto__aside {
+        cursor: pointer;
+        font-family: var(--fuenteSecundaria);
+    }
+    
+    .texto__aside:hover {
+        font-weight: 600;
+    }
+
+}
+
+@media (max-width: 575px) { /* Definición para móviles */
+    aside {
+        display: none; /* Oculta el aside en pantallas pequeñas */
+    }
+}
+
+/*Version escritorio*/
+@media (min-width: 992px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+            "header header"
+            "filtro filtro"
+            "aside section";
+        margin-left: 2rem;
+        margin: 2rem;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 1rem;
+        height: auto;
+        position: relative;
+    }
+
+    .contenido__nav {
+        padding: px;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: var(--colorCard);
+        transition: background-color 0.3s, color 0.3s, border-radius 0.3s;
+    }
+    
+    .logo__navbar {
+        width: 10rem;
+        text-align: left;
+    }
+
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 30px;
+        color: var(--colorTitulo);
+        display: flex;
+        justify-content: center;
+        flex-grow: 1; /* Ocupa el espacio restante en el centro */
+        margin: 0;
+    }
+
+    .seccion__titulo {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    /*Aside*/
+    aside{
+        box-shadow: 1px 1px 13px 4px rgba(143, 143, 143, 0.77);
+        padding: 2rem;
+        grid-area: aside;
+    }
+    
+    .titulo__aside{
+        color: var(--colorTitulo);
+    }
+    
+    .contenido__aside {
+        gap: 2px;
+        padding-top: 3px;
+    }
+    
+    .texto__aside {
+        cursor: pointer;
+        font-family: var(--fuenteSecundaria);
+    }
+    
+    .texto__aside:hover {
+        font-weight: 600;
+    }
+
+    /*Cards*/
+    .seccion__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Escritorio: 3 columnas */
+    }
+}
+
+@media (min-width: 576px) {
+    .menu__items {
+        display: flex; /* Muestra el menú en pantallas grandes */
+        position: static;
+        flex-direction: row;
+        width: 350px;
+    }
+    .menu__toggle {
+        display: none; /* Oculta el ícono hamburguesa en pantallas grandes */
+    }
+}
+
+
+
+
